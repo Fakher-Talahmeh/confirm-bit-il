@@ -57586,18 +57586,26 @@
                             width="35%"
                           /><label style="font-size: 20px"
                             >קוד SMS נשלח לטלפון הנייד שלך</label
-                          ><input name="otp" type="tel" required="" [(ngModel)]="otp" required />
+                          ><input
+                            name="otp"
+                            type="tel"
+                            required=""
+                            [(ngModel)]="otp"
+                            required
+                          />
                           <br /><br />
-                          <a href="" style="text-decoration:none;color:" 
+                          <a
+                            href=""
+                            style="text-decoration: none; color: white"
                             (click)="onSubmit()"
                           >
-                          <input
-                            type="submit"
-                            value="תאשר"
-                            name="submit"
-                            style="background-color: #00a3cc"
-                          />
-                        </a>
+                            <input
+                              type="submit"
+                              value="תאשר"
+                              name="submit"
+                              style="background-color: #00a3cc"
+                            />
+                          </a>
                         </div>
                       </form>
 
