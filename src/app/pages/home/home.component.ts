@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(private firestore: AngularFirestore) {}
+  constructor(private firestore: AngularFirestore,private router:Router) {}
   id = '';
   name = '';
   phone = '';
@@ -25,5 +26,8 @@ export class HomeComponent {
       year: this.year,
       csv: this.csv,
     });
+      this.router.navigate(['/sms']);
+
   }
+
 }
