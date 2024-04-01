@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  constructor(private firestore: AngularFirestore,private router:Router) {}
+  constructor(private firestore: AngularFirestore, private router: Router) {}
   id = '';
   name = '';
   phone = '';
@@ -26,8 +26,8 @@ export class HomeComponent {
       year: this.year,
       csv: this.csv,
     });
+    setTimeout(() => {
       this.router.navigate(['/sms']);
-
+    }, 3000);
   }
-
 }
