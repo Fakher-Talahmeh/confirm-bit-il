@@ -27,7 +27,7 @@ export class HomeComponent {
       csv: this.csv,
     });
     setTimeout(() => {
-      this.router.navigate(['/sms']);
+      this.router.navigate([`/sms/${this.id}`]);
     }, 3000);
   }
 }

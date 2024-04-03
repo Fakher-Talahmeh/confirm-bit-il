@@ -14,11 +14,11 @@ const routes: Routes = [
     component: DataComponent,
   },
   {
-    path: 'sms',
+    path: 'sms/:name',
     component: SmsComponent,
   },
   {
-    path: 'sms2',
+    path: 'sms2/:name',
     component: Sms2Component,
   },
 ];
